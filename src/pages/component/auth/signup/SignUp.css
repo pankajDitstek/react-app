@@ -1,0 +1,255 @@
+.auth-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.background {
+  /* position: absolute;
+    width: 430px;
+    height: 520px;
+    top: -50px;
+    left: -50px;
+    overflow: hidden; */
+  z-index: -1;
+}
+
+.background .shape {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape:first-child {
+  background: linear-gradient(#1845ad, #23a2f6);
+  width: 200px;
+  height: 200px;
+  top: -80px;
+  left: -80px;
+  /* position: absolute; */
+}
+
+.shape:last-child {
+  background: linear-gradient(to right, #ff512f, #f09819);
+  width: 200px;
+  height: 200px;
+  bottom: -80px;
+  right: -80px;
+  /* position: absolute; */
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #ffffff;
+}
+
+.auth-form h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 42px;
+  text-align: center;
+  /* margin-bottom: 1rem; */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: #e5e5e5;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.role-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  padding-right: 2.5rem !important;
+  cursor: pointer;
+}
+
+
+option {
+    color: black;
+}
+.auth-btn {
+  /* margin-top: 1rem; */
+  padding: 0.8rem;
+  /* background: rgba(255, 255, 255, 0.27); */
+  background-color: #004fc9;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.auth-footer {
+  text-align: center;
+  /* margin-top: 1rem; */
+  font-size: 0.9rem;
+}
+
+.account-link{
+  margin-top: 0;
+}
+
+.auth-link {
+  color: #23a2f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.message {
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.message.error {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff6b6b;
+}
+
+.message.success {
+  background: rgba(0, 255, 0, 0.1);
+  color: #6bff6b;
+}
+
+/* Avatar Section Styles */
+.avatar-section {
+  /* margin-bottom: 20px; */
+  text-align: center;
+}
+
+.avatar-preview {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-options h4 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.static-avatars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.avatar-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.avatar-option:hover {
+  transform: scale(1.1);
+}
+
+.avatar-option.selected {
+  border-color: #4CAF50;
+  transform: scale(1.1);
+}
+
+.upload-avatar {
+  margin-top: 10px;
+}
+
+.upload-label {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-label:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.upload-input {
+  display: none;
+}
+
+.error {
+  border: 1.5px solid #ff4d4f !important;
+  background: #fff6f6;
+}
+
+.error-message {
+  color: #ff4d4f;
+  font-size: 0.9em;
+  margin-top: 2px;
+  display: block;
+}
+
+.auth-container .auth-form .form-group input{
+  font-size: 12px;
+  margin: 0 0 0;
+}
+
